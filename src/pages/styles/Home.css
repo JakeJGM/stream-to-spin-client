@@ -1,0 +1,28 @@
+body  {
+  background-color: rgb(36, 36, 36);
+  padding-bottom: 100px;
+}
+
+.record-display-container  {
+  display: grid;
+  gap: 5vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-columns: repeat(4, 1fr);
+  overflow: scroll;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+}
+
+.record-display-container .loading-text  {
+  color: white;
+  font-size: 70px;
+  grid-column: 1 / -1; /* Span across all columns */
+  grid-row: 1; /* Place in the first row */
+  justify-self: center; /* Horizontally center within the grid cell */
+  align-self: center; /* Vertically center within the grid cell */
+}

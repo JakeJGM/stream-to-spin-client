@@ -1,0 +1,29 @@
+.login-container  {
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.login-container .spotify-login-button  {
+  text-align: center;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 20px;
+  border-style: solid;
+  background-color: rgb(30, 215, 96);
+
+  font-family: "Flow Circular", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  display: inline;
+
+  cursor: pointer;
+}
+
+.login-container .spotify-login-button .spotify-icon  {
+  font-size: 35px;
+}

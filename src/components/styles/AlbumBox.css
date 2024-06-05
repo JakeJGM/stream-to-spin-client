@@ -1,0 +1,87 @@
+.album-box-container {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+
+  border-style: solid;
+  border-radius: 20px;
+  width: 250px;
+  padding: 10px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.album-box-container:hover  {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+
+  border-style: solid;
+  border-color: rgb(181, 141, 208);
+  /*border-color: rgb(145, 188, 253);*/
+  border-radius: 20px;
+  border-width: 5px;
+  width: 250px;
+  padding: 5px;
+  margin-bottom: 3.5px;
+  
+  /*margin-bottom: -6.8px;*/
+  
+  display: flex;
+  flex-direction: column;
+
+  transition: 100ms ease;
+}
+
+.album-box-container .album-cover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 85%;
+  cursor: pointer;
+}
+
+.album-box-container .album-text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 85%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.album-box-container .album-title {
+  font-size: 25px;
+}
+
+.album-box-container .product-links-container { 
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.album-box-container .product-links-container .product-link { 
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.album-box-container .product-links-container .product-link:hover { 
+  margin-top: auto;
+  cursor: pointer;
+  /*color: rgb(158, 80, 210);*/
+  color: rgb(181, 141, 208);
+  /*color: rgb(208, 225, 250);*/
+
+  transition: 100ms ease;
+}
+
+.album-box-container .store-icon {
+  font-size: 25px;
+  width: 50px;
+}
