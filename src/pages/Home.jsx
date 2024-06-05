@@ -10,6 +10,9 @@ import './styles/Home.css';
 import SongPlayer from '../components/SongPlayer';
 
 const CLIENT_ID = 'f8be2f0469254d999018468ce325b315';
+//const SERVER_URI = 'https://stream-to-spin-server.onrender.com';
+const SERVER_URI = 'http://localhost:3001';
+/*http://localhost:3001 */
 
 
 const spotifyApi = new SpotifyWebApi({
@@ -137,7 +140,7 @@ function Home() {
   async function getEbayResults(searchParams) {
     // call to server
     try {
-      const response = await axios.post('http://localhost:3001/getEbayProducts', {
+      const response = await axios.post(SERVER_URI + '/getEbayProducts', {
         searchParams
       })
       console.log(response.data);
