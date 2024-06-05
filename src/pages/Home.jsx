@@ -10,8 +10,6 @@ import './styles/Home.css';
 import SongPlayer from '../components/SongPlayer';
 
 const CLIENT_ID = 'f8be2f0469254d999018468ce325b315';
-const CLIENT_SECRET = 'e2e46ce3b1f64087919696e2531a632b';
-const rdr_uri = 'http://localhost:5173/home';
 
 
 const spotifyApi = new SpotifyWebApi({
