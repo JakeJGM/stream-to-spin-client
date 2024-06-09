@@ -1,7 +1,7 @@
 import './styles/StreamToSpin.css';
-import logo from '../images/StreamToSpin_V3.png';
+import logo from '../images/StreamToSpin_V4.png';
 
-function StreamToShop()  {
+function StreamToSpin()  {
 
   return(
     <>
@@ -10,4 +10,4 @@ function StreamToShop()  {
   )
 }
 
-export default StreamToShop;
+export default StreamToSpin;

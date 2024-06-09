@@ -12,7 +12,6 @@ import SongPlayer from '../components/SongPlayer';
 const CLIENT_ID = 'f8be2f0469254d999018468ce325b315';
 //const SERVER_URI = 'https://stream-to-spin-server.onrender.com';
 const SERVER_URI = 'http://localhost:3001';
-/*http://localhost:3001 */
 
 
 const spotifyApi = new SpotifyWebApi({
@@ -21,15 +20,6 @@ const spotifyApi = new SpotifyWebApi({
 let albumRecommendations = [];
 
 function Home() {
-  
-  //let albumRecommendations = JSON.parse('[{"id":"18NOKLkZETa4sWwLMIm0UZ","title":"UTOPIA","artist":"Travis Scott","imgLink":"https://i.scdn.co/image/ab67616d0000b273881d8d8378cd01099babcd44","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"$29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "},{"id":"3mH6qwIy9crq0I9YQbOuDf","title":"Blonde","artist":"Frank Ocean","imgLink":"https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "}]');
-
-  // https://www.amazon.com/dp/B0BRJW3PKF
-
-  //let albumRecommendations = JSON.parse('[{"id":"18NOKLkZETa4sWwLMIm0UZ","title":"UTOPIA","artist":"Travis Scott","imgLink":"https://i.scdn.co/image/ab67616d0000b273881d8d8378cd01099babcd44","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"$29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "},{"id":"1Sf8GsXG32t0jNrX11xqWx","title":"JACKBOYS","artist":"JACKBOYS","imgLink":"https://i.scdn.co/image/ab67616d0000b273dfc2f59568272de50a257f2f","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"$29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "},{"id":"79ONNoS4M9tfIA1mYLBYVX","title":"Mr. Morale & The Big Steppers","artist":"Kendrick Lamar","imgLink":"https://i.scdn.co/image/ab67616d0000b2732e02117d76426a08ac7c174f","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"$29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "},{"id":"3pLdWdkj83EYfDN6H2N8MR","title":"Black Panther The Album Music From And Inspired By","artist":"Kendrick Lamar","imgLink":"https://i.scdn.co/image/ab67616d0000b273c027ad28821777b00dcaa888","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"$29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "},{"id":"3mH6qwIy9crq0I9YQbOuDf","title":"Blonde","artist":"Frank Ocean","imgLink":"https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"$29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "},{"id":"392p3shh2jkxUxY2VHvlH8","title":"channel ORANGE","artist":"Frank Ocean","imgLink":"https://i.scdn.co/image/ab67616d0000b2737aede4855f6d0d738012e2e5","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"$29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "},{"id":"3bSNhnaQQXpC639OQ4pMyP","title":"WE STILL DON\'T TRUST YOU","artist":"Future","imgLink":"https://i.scdn.co/image/ab67616d0000b273d353552c4c2932094456bbe9","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"$29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "},{"id":"4iqbFIdGOTzXeDtt9owjQn","title":"WE DON\'T TRUST YOU","artist":"Future","imgLink":"https://i.scdn.co/image/ab67616d0000b273a46b07c291e6dfdee13b3ee8","ebayPrice":"$29.99","ebayLink":" ","amazonPrice":"$29.99","amazonLink":" ","targetPrice":"$29.99","targetLink":" "}]');
-  
-  //const albumRecommendations = JSON.parse('[{"id":"18NOKLkZETa4sWwLMIm0UZ","title":"UTOPIA","artist":"Travis Scott","imgLink":"https://i.scdn.co/image/ab67616d0000b273881d8d8378cd01099babcd44"},{"id":"1Sf8GsXG32t0jNrX11xqWx","title":"JACKBOYS","artist":"JACKBOYS","imgLink":"https://i.scdn.co/image/ab67616d0000b273dfc2f59568272de50a257f2f"},{"id":"79ONNoS4M9tfIA1mYLBYVX","title":"Mr. Morale & The Big Steppers","artist":"Kendrick Lamar","imgLink":"https://i.scdn.co/image/ab67616d0000b2732e02117d76426a08ac7c174f"},{"id":"3pLdWdkj83EYfDN6H2N8MR","title":"Black Panther The Album Music From And Inspired By","artist":"Kendrick Lamar","imgLink":"https://i.scdn.co/image/ab67616d0000b273c027ad28821777b00dcaa888"},{"id":"3mH6qwIy9crq0I9YQbOuDf","title":"Blonde","artist":"Frank Ocean","imgLink":"https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526"},{"id":"392p3shh2jkxUxY2VHvlH8","title":"channel ORANGE","artist":"Frank Ocean","imgLink":"https://i.scdn.co/image/ab67616d0000b2737aede4855f6d0d738012e2e5"},{"id":"3bSNhnaQQXpC639OQ4pMyP","title":"WE STILL DON\'T TRUST YOU","artist":"Future","imgLink":"https://i.scdn.co/image/ab67616d0000b273d353552c4c2932094456bbe9"},{"id":"4iqbFIdGOTzXeDtt9owjQn","title":"WE DON\'T TRUST YOU","artist":"Future","imgLink":"https://i.scdn.co/image/ab67616d0000b273a46b07c291e6dfdee13b3ee8"}]');
-
   const urlParams = new URLSearchParams(window.location.search);
   const code = urlParams.get('code');
   const accessToken = useAuth(code);
@@ -57,7 +47,7 @@ function Home() {
     }
     // get users top artists
     spotifyApi
-      .getMyTopArtists({limit: 10, offset: 0 })
+      .getMyTopArtists({ limit: 2, offset: 2 })
       .then(function(data) {
         setTopArtists(data.body.items);
       })
@@ -109,20 +99,21 @@ function Home() {
     getRecommendedAlbums(topArtists);
   }, [topArtists]);
   
-
-  
   /** Get Store Results **/
   useEffect(() => { 
     if(!receivedAllRecommendations) {
       return;
     }
-    calculateResults();
+    getAllResults();
+    //calculateResults();
   }, [receivedAllRecommendations]);
 
+  /*
   async function calculateResults()  {
     await getAllResults();
     setRecords(albumRecommendations);
   }
+  */
 
   async function getAllResults()  {
     // Get search query for all albums 
@@ -132,12 +123,30 @@ function Home() {
     }
     console.log(searchParams);
 
-    await getEbayResults(searchParams);
-    //await getAmazonResults();
-    //await getTargetResults();
+    //let ebayPromise = getEbayResults(searchParams);
+    //let amazonPromise = getAmazonResults();
+    //let targetPromise = getTargetResults();
+    /*
+    Promise.all([ebayPromise])
+    .then(() => {
+      setRecords(albumRecommendations);
+    }, err => {
+      console.log(err);
+    });
+    */
+   for(const albumDetails of albumRecommendations) {
+    albumDetails.amazonPrice = '$29.99';
+    albumDetails.amazonLink = 'https://www.amazon.com/';
+    albumDetails.ebayPrice = '$45.87';
+    albumDetails.ebayLink = 'https://www.ebay.com/';
+    albumDetails.targetPrice = '$38.05';
+    albumDetails.targetLink = 'https://www.target.com/';
+   }
+   setRecords(albumRecommendations);
   }
 
   async function getEbayResults(searchParams) {
+    console.log('in ebay results');
     // call to server
     try {
       const response = await axios.post(SERVER_URI + '/getEbayProducts', {
@@ -160,6 +169,7 @@ function Home() {
 
 
   async function getAmazonResults()  {
+    console.log('in amazon results');
     for(const albumDetails of albumRecommendations) {
       const options = {
         method: 'GET',
@@ -187,6 +197,7 @@ function Home() {
   }
 
   async function getTargetResults()  {
+    console.log('in target results');
     for(const albumDetails of albumRecommendations) {
       const options = {
         method: 'GET',
@@ -224,7 +235,7 @@ function Home() {
         {records ? records.map((album) => (
           <AlbumBox title={album.title} artist={album.artist} imgLink={album.imgLink} key={album.id} ebayPrice={album.ebayPrice} ebayLink={album.ebayLink} amazonPrice={album.amazonPrice} amazonLink={album.amazonLink} targetPrice={album.targetPrice} targetLink={album.targetLink} albumSpotifyUri={album.albumSpotifyUri} setAlbumSpotifyUri={setAlbumSpotifyUri}/>
         ))
-        : <p className="loading-text">...Loading Records <FontAwesomeIcon icon={faRecordVinyl} /></p>}
+        : <p className="loading-text">...Loading Records <FontAwesomeIcon className="record-icon" icon={faRecordVinyl} /></p>}
       </div>
       {albumSpotifyUri && <SongPlayer accessToken={accessToken} albumSpotifyUri={albumSpotifyUri} />}
     </>

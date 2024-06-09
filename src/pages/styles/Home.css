@@ -16,13 +16,29 @@ body  {
   justify-content: space-evenly;
   justify-items: center;
   align-content: space-evenly;
+
+  padding-bottom: 1vw;
+  padding-top: 1vw;
 }
 
 .record-display-container .loading-text  {
   color: white;
   font-size: 70px;
-  grid-column: 1 / -1; /* Span across all columns */
-  grid-row: 1; /* Place in the first row */
-  justify-self: center; /* Horizontally center within the grid cell */
-  align-self: center; /* Vertically center within the grid cell */
+  grid-column: 1 / -1;
+  grid-row: 1; 
+  justify-self: center;
+  align-self: center; 
+}
+
+.record-display-container .loading-text .record-icon  {
+  border: 5px solid white;
+  border-bottom: 5px solid rgb(181, 141, 208);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

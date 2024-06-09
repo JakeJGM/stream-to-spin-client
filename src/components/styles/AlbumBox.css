@@ -5,13 +5,17 @@
   font-style: normal;
   color: white;
 
-  border-style: solid;
+  border-style: none;
+  box-shadow: 0 0 10px 5px rgb(104, 104, 104);
+
   border-radius: 20px;
   width: 250px;
   padding: 10px;
   
   display: flex;
   flex-direction: column;
+
+  transition: 100ms ease;
 }
 
 .album-box-container:hover  {
@@ -21,21 +25,25 @@
   font-style: normal;
   color: white;
 
+  /*
   border-style: solid;
   border-color: rgb(181, 141, 208);
-  /*border-color: rgb(145, 188, 253);*/
+  */
+  box-shadow: 0 0 10px 5px rgb(181, 141, 208);
+  /*border-color: rgb(145, 188, 253);
   border-radius: 20px;
   border-width: 5px;
   width: 250px;
   padding: 5px;
   margin-bottom: 3.5px;
+  */
   
   /*margin-bottom: -6.8px;*/
   
   display: flex;
   flex-direction: column;
 
-  transition: 100ms ease;
+  transition: 200ms ease;
 }
 
 .album-box-container .album-cover {
@@ -64,24 +72,67 @@
 .album-box-container .product-links-container { 
   margin-top: auto;
   margin-bottom: 10px;
+  font-size: 15px;
 }
 
 .album-box-container .product-links-container .product-link { 
   margin-top: auto;
-  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .album-box-container .product-links-container .product-link:hover { 
   margin-top: auto;
-  cursor: pointer;
+  cursor: default;
   /*color: rgb(158, 80, 210);*/
-  color: rgb(181, 141, 208);
   /*color: rgb(208, 225, 250);*/
+
+  /*color: rgb(181, 141, 208);*/
 
   transition: 100ms ease;
 }
 
 .album-box-container .store-icon {
-  font-size: 25px;
-  width: 50px;
+  font-size: 20px;
+}
+
+.album-box-container .product-links-container .product-link .buy-button  {
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+
+  color: white;
+  background-color: transparent;
+  padding: 8px;
+  width: 90px;
+}
+
+.album-box-container .product-links-container .product-link .buy-button:hover  {
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(181, 141, 208);;
+
+  color: white;
+  background-color: transparent;
+  padding: 8px;
+  width: 90px;
+
+  cursor: pointer;
+  transition: 100ms ease;
+}
+
+.price-buy-container  {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.store-info-container {
+  display: flex;
+  align-items: center;;
 }
