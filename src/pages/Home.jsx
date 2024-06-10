@@ -10,8 +10,8 @@ import './styles/Home.css';
 import SongPlayer from '../components/SongPlayer';
 
 const CLIENT_ID = 'f8be2f0469254d999018468ce325b315';
-//const SERVER_URI = 'https://stream-to-spin-server.onrender.com';
-const SERVER_URI = 'http://localhost:3001';
+const SERVER_URI = 'https://stream-to-spin-server.onrender.com';
+//const SERVER_URI = 'http://localhost:3001';
 
 
 const spotifyApi = new SpotifyWebApi({
