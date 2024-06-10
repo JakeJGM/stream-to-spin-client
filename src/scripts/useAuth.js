@@ -6,6 +6,10 @@ function useAuth(code) {
   const [refreshToken, setRefreshToken] = useState();
   const [expiresIn, setExpiresIn] = useState();
 
+  const API_URI = 'https://stream-to-spin-server.onrender.com';
+  //const API_URI = 'http://localhost:3001'
+
+
 
   /** Get access code **/
   useEffect(() => {
@@ -13,7 +17,7 @@ function useAuth(code) {
       return;
     }
     axios
-    .post('http://localhost:3001/login', {
+    .post(API_URI + '/login', {
       code,
     })
     .then(res => {
@@ -36,7 +40,7 @@ function useAuth(code) {
     const interval = setInterval(() => {
 
       axios
-      .post('http://localhost:3001/refresh', {
+      .post(API_URI + '/refresh', {
         refreshToken,
       })
       .then(res => {
