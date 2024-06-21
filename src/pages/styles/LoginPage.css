@@ -1,14 +1,15 @@
+.outer-container  {
+  display: flex;
+  justify-content: center;
+}
+
 .login-container  {
   padding: 15px;
   position: absolute;
   display: flex;
   align-items: center;
   flex-direction: column;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  margin: auto;
 
   color: white;
 }

@@ -37,22 +37,24 @@ function LoginPage() {
 
   return (
     <>
+    <div className="outer-container">
       <div className="login-container">
       <h1>Stream To Spin</h1>
       <div className="phone-container">
-          <Phone />
-        </div>
-        {show &&
-        <div className="record-player-container">
-          <RecordPlayer zoom={0.80} play={true}/>
-        </div>
-        }
+        <Phone />
+      </div>
+      {show &&
+      <div className="record-player-container">
+        <RecordPlayer zoom={0.80} play={true}/>
+      </div>
+      }
         <p >Find Vinyl Records Based on Your Listening History</p>
         <button className="spotify-login-button" onClick={authorizeSpotify}>
           <FontAwesomeIcon className="spotify-icon" icon={faSpotify} /> &nbsp; 
           Login with Spotify
         </button>
       </div>
+    </div>
     </>
   )
 }
