@@ -1,0 +1,80 @@
+.phone  {
+  position: relative;
+}
+
+.rim  {
+  height: 350px;
+  width: 190px;
+ 
+  border-radius: 20px;
+  
+  background-color: rgb(28, 28, 28);
+  display: flex;
+}
+
+.screen  {
+  height: 330px;
+  width: 170px;
+  border-radius: 15px;
+  border-style:solid;
+  background-color: #393939;
+  color: rgb(55, 55, 55);
+
+  align-self:center;
+  margin:auto;
+  display: block;
+}
+
+.bezel  {
+  height: 13px;
+  width: 60px;
+  border-radius: 10px;
+  background-color: rgb(28, 28, 28);
+  margin: auto;
+  margin-top: 5px;
+}
+
+.playlist-cover  {
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: rgb(181, 141, 208);
+  margin: auto;
+  margin-top: 10px;
+}
+
+.playlist-buttons  {
+  height: 50px;
+  width: 150px;
+  border-style: none;
+  border-color: black;
+  margin: auto;
+  display: flex;
+
+  color: rgb(181, 141, 208);
+  font-size: 40px;
+}
+
+.song-list  {
+  display: block;
+  margin: auto;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.song-desc  {
+  border-style: none;
+  display:flex;
+  font-size: 25px;
+  color: rgb(181, 141, 208);
+  padding-bottom: 10px;
+}
+
+.song-name  {
+  width:100px;
+  height: 10px;
+  border-style: solid;
+  align-self: center;
+  margin-left: 10px;
+  background-color: rgb(181, 141, 208);
+}

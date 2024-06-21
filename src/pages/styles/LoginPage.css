@@ -1,11 +1,33 @@
 .login-container  {
   padding: 15px;
   position: absolute;
-  top: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 40%;
   left: 50%;
   -ms-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+
+  color: white;
+}
+
+.login-container .title-text  {
+  color: white;
+  text-align: center;
+  width: 500px;
+  font-weight: 400;
+  font-size: 20px;
+  
+  margin-top: -60px;
+  padding: 10px;
+}
+
+.login-container .description-text  {
+  font-size: 20px;
+  color: white;
+  margin: auto;
 }
 
 .login-container .spotify-login-button  {
@@ -15,6 +37,7 @@
   border-radius: 20px;
   border-style: solid;
   background-color: rgb(30, 215, 96);
+  color: black;
 
   font-family: "Flow Circular", system-ui;
   font-weight: 400;
@@ -22,8 +45,64 @@
   display: inline;
 
   cursor: pointer;
+  margin-top: 30px;
 }
 
 .login-container .spotify-login-button .spotify-icon  {
   font-size: 35px;
+}
+
+.phone-container  {
+  display: block;
+  /*animation: turn 0.5s linear 1  bounceOut 0.5s ease-in 1; */
+  /*animation: 0.5s linear 2s 1 forwards turn, 0.5s linear 2s 1 backwards bounceOut;*/
+  /*animation: 0.5s linear 2s 1 forwards bounceOut;*/
+  animation: 0.5s ease 2s 1 forwards bounceOut;
+}
+
+.record-player-container {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  top: 25%;
+
+  animation: 1s ease 0s 1 forwards bounceIn;
+}
+
+@keyframes turn {
+  to {
+    transform: rotate(90deg);
+    zoom: 0.9;
+  }
+}
+
+@keyframes grow  {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shrink  {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

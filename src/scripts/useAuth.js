@@ -6,8 +6,8 @@ function useAuth(code) {
   const [refreshToken, setRefreshToken] = useState();
   const [expiresIn, setExpiresIn] = useState();
 
-  const API_URI = 'https://stream-to-spin-server.onrender.com';
-  //const API_URI = 'http://localhost:3001'
+  //const API_URI = 'https://stream-to-spin-server.onrender.com';
+  const API_URI = 'http://localhost:3001'
 
 
 
@@ -25,6 +25,8 @@ function useAuth(code) {
       setRefreshToken(res.data.refreshToken);
       setExpiresIn(res.data.expiresIn);
       window.history.pushState({}, null, '/home');
+
+      sessionStorage.setItem('accTok', res.data.accessToken);
     })
     .catch(() => {
       //window.location = '/';

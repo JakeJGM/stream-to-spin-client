@@ -13,7 +13,6 @@ function SongPlayer({accessToken, albumSpotifyUri})  {
         play={true}
         showSaveIcon={true}
         uris={albumSpotifyUri ? [albumSpotifyUri] : []}
-        //uris={'spotify:album:3mH6qwIy9crq0I9YQbOuDf'}
 
         styles={{
           bgColor: '#242424',

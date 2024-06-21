@@ -115,7 +115,7 @@
   border-radius: 20px;
   border-style: solid;
   border-width: 1px;
-  border-color: rgb(181, 141, 208);;
+  border-color: rgb(181, 141, 208);
 
   color: white;
   background-color: transparent;
@@ -135,4 +135,15 @@
 .store-info-container {
   display: flex;
   align-items: center;;
+}
+
+.ebay-logo  {
+  height: 25px;
+  width: 25px;
+}
+
+.vinyl-listings-text  {
+  font-size: 11px;
+  color: grey;
+  margin-left: 3px;
 }

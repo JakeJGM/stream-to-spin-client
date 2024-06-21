@@ -5,6 +5,7 @@ import { faAmazon } from '@fortawesome/free-brands-svg-icons';
 import { faBullseye } from '@fortawesome/free-solid-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import ebayLogo from '../images/T5+W_ebay_logo_rgb.png';
 import './styles/AlbumBox.css';
 
 function AlbumBox({title, artist, imgLink, ebayPrice, ebayLink, amazonPrice, amazonLink, targetPrice, targetLink, albumSpotifyUri, setAlbumSpotifyUri})  {
@@ -65,11 +66,12 @@ function AlbumBox({title, artist, imgLink, ebayPrice, ebayLink, amazonPrice, ama
           <p className="album-artist">{artist}</p>
         </div>
         <div className="product-links-container">
+          <p className="vinyl-listings-text">Vinyl Listings</p>
           {( ebayPrice != 'null' && ebayLink != 'null' ) &&
             <div className="product-link">
             <div className="store-info-container">
-              <FontAwesomeIcon className="store-icon" icon={faEbay} /> 
-              <p>&nbsp;Ebay</p>
+              
+              <p>&nbsp;&nbsp;eBay</p>
             </div>
             <div className="price-buy-container">
               <p>{ebayPrice} &nbsp;</p> 
